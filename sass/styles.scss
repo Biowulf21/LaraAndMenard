@@ -162,10 +162,10 @@ Animations
 /* ==========================================================================
 Waypoinsts
 ========================================================================== */
-.wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9 {
+.wp1, .wp2, .wp3, .wp4, .wp5, .wp6, .wp7, .wp8, .wp9, .wp10, wp11 {
   visibility: hidden
 }
-.wp8, .wp9 {
+.wp8, .wp9, .wp10, .wp11 {
   -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s
 }
@@ -252,7 +252,7 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 750px;
-  background: url('../img/hero-min.jpg') center center;
+  background: url('../img/DSC09814.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

@@ -1,49 +1,60 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
     /***************** Waypoints ******************/
 
-    $('.wp1').waypoint(function () {
+    $('.wp1').waypoint(function() {
         $('.wp1').addClass('animated fadeInLeft');
     }, {
         offset: '75%'
     });
-    $('.wp2').waypoint(function () {
+    $('.wp2').waypoint(function() {
         $('.wp2').addClass('animated fadeInRight');
     }, {
         offset: '75%'
     });
-    $('.wp3').waypoint(function () {
+    $('.wp3').waypoint(function() {
         $('.wp3').addClass('animated fadeInLeft');
     }, {
         offset: '75%'
     });
-    $('.wp4').waypoint(function () {
+    $('.wp4').waypoint(function() {
         $('.wp4').addClass('animated fadeInRight');
     }, {
         offset: '75%'
     });
-    $('.wp5').waypoint(function () {
+    $('.wp5').waypoint(function() {
         $('.wp5').addClass('animated fadeInLeft');
     }, {
         offset: '75%'
     });
-    $('.wp6').waypoint(function () {
+    $('.wp6').waypoint(function() {
         $('.wp6').addClass('animated fadeInRight');
     }, {
         offset: '75%'
     });
-    $('.wp7').waypoint(function () {
+    $('.wp7').waypoint(function() {
         $('.wp7').addClass('animated fadeInUp');
     }, {
         offset: '75%'
     });
-    $('.wp8').waypoint(function () {
+    $('.wp8').waypoint(function() {
         $('.wp8').addClass('animated fadeInLeft');
     }, {
         offset: '75%'
     });
-    $('.wp9').waypoint(function () {
+    $('.wp9').waypoint(function() {
         $('.wp9').addClass('animated fadeInRight');
+    }, {
+        offset: '75%'
+    });
+
+    $('.wp10').waypoint(function() {
+        $('.wp10').addClass('animated fadeInLeft');
+    }, {
+        offset: '75%'
+    });
+    $('.wp11').waypoint(function() {
+        $('.wp11').addClass('animated fadeInRight');
     }, {
         offset: '75%'
     });
@@ -71,13 +82,13 @@ $(document).ready(function () {
     /***************** Nav Transformicon ******************/
 
     /* When user clicks the Icon */
-    $('.nav-toggle').click(function () {
+    $('.nav-toggle').click(function() {
         $(this).toggleClass('active');
         $('.header-nav').toggleClass('open');
         event.preventDefault();
     });
     /* When user clicks a link */
-    $('.header-nav li a').click(function () {
+    $('.header-nav li a').click(function() {
         $('.nav-toggle').toggleClass('active');
         $('.header-nav').toggleClass('open');
 
@@ -85,8 +96,8 @@ $(document).ready(function () {
 
     /***************** Header BG Scroll ******************/
 
-    $(function () {
-        $(window).scroll(function () {
+    $(function() {
+        $(window).scroll(function() {
             var scroll = $(window).scrollTop();
 
             if (scroll >= 20) {
@@ -118,9 +129,9 @@ $(document).ready(function () {
     });
     /***************** Smooth Scrolling ******************/
 
-    $(function () {
+    $(function() {
 
-        $('a[href*=#]:not([href=#])').click(function () {
+        $('a[href*=#]:not([href=#])').click(function() {
             if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 
                 var target = $(this.hash);
@@ -166,11 +177,11 @@ $(document).ready(function () {
 
 
     /********************** Toggle Map Content **********************/
-    $('#btn-show-map').click(function () {
+    $('#btn-show-map').click(function() {
         $('#map-content').toggleClass('toggle-map-content');
         $('#btn-show-content').toggleClass('toggle-map-content');
     });
-    $('#btn-show-content').click(function () {
+    $('#btn-show-content').click(function() {
         $('#map-content').toggleClass('toggle-map-content');
         $('#btn-show-content').toggleClass('toggle-map-content');
     });
@@ -208,7 +219,7 @@ $(document).ready(function () {
 
 
     /********************** RSVP **********************/
-    $('#rsvp-form').on('submit', function (e) {
+    $('#rsvp-form').on('submit', function(e) {
         e.preventDefault();
         var data = $(this).serialize();
 
@@ -219,7 +230,7 @@ $(document).ready(function () {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
             $.post('https://script.google.com/macros/s/AKfycbyo0rEknln8LedEP3bkONsfOh776IR5lFidLhJFQ6jdvRiH4dKvHZmtoIybvnxpxYr2cA/exec', data)
-                .done(function (data) {
+                .done(function(data) {
                     console.log(data);
                     if (data.result === "error") {
                         $('#alert-wrapper').html(alert_markup('danger', data.message));
@@ -228,7 +239,7 @@ $(document).ready(function () {
                         $('#rsvp-modal').modal('show');
                     }
                 })
-                .fail(function (data) {
+                .fail(function(data) {
                     console.log(data);
                     $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
                 });
@@ -241,7 +252,7 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var location = {lat: 22.5932759, lng: 88.27027720000001};
+    var location = { lat: 22.5932759, lng: 88.27027720000001 };
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: location,
@@ -255,7 +266,7 @@ function initMap() {
 }
 
 function initBBSRMap() {
-    var la_fiesta = {lat: 20.305826, lng: 85.85480189999998};
+    var la_fiesta = { lat: 20.305826, lng: 85.85480189999998 };
     var map = new google.maps.Map(document.getElementById('map-canvas'), {
         zoom: 15,
         center: la_fiesta,
@@ -274,7 +285,7 @@ function alert_markup(alert_type, msg) {
 }
 
 // MD5 Encoding
-var MD5 = function (string) {
+var MD5 = function(string) {
 
     function RotateLeft(lValue, iShiftBits) {
         return (lValue << iShiftBits) | (lValue >>> (32 - iShiftBits));
