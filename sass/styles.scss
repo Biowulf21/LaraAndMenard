@@ -23,6 +23,10 @@ Global Styles
 .no-margin {
   margin: 0;
 }
+.p-closer {
+    margin-bottom: 0px !important;
+    line-height: 0px !important;
+}
 a {
   color: $accent-color;
   -webkit-transition-timing-function: ease;
