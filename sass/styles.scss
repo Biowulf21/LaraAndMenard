@@ -25,7 +25,7 @@ Global Styles
 }
 .p-closer {
     margin-bottom: 0px !important;
-    line-height: 0px !important;
+    line-height: inherit !important;
 }
 a {
   color: $accent-color;
