@@ -208,7 +208,7 @@ $(document).ready(function() {
             end: new Date('June 8, 2024 18:00'),
 
             // Event Address
-            address: 'Dahilayan IP Eco Park and Resort',
+            address: 'IP\'s Park and Resort',
 
             // Event Description
             description: "We can't wait to see you on our big day. For any queries or issues, please contact Ms. Claire Niez  at  +639154240655."
