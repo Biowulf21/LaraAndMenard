@@ -1,40 +1,34 @@
-// Typography partial
+/* Typography partial */
 @import "partials/colors";
 
 // Fonts
-
 $sans-serif: 'Open Sans', sans-serif;
 $serif: Merriweather, Georgia, 'Times New Roman', serif;
 $accent-font: 'Nunito', sans-serif;
 
 // Weights
-
 $light: 300;
 $normal: 400;
 $semibold: 500;
 $bold: 700;
 
 // Sizes
-
 $font-size-h1: 60px;
 $font-size-h2: 40px;
 $font-size-h3: 24px;
-$font-size-h4: 18px;
-$font-size-h5: 15px;
+$font-size-h4: 20px;
+$font-size-h5: 18px;
 $font-size-p: 15px;
 $nav-font-size: 13px;
 $blog-post-title: 11px;
 
 // Responsive Sizes
-
 $responsive-h1: 40px;
 
 // Line height
-
 $base-line-height: 29px;
 
 // Styles
-
 /* ==========================================================================
 Typography
 ========================================================================== */
@@ -42,30 +36,31 @@ p {
   font-size: $font-size-p;
   line-height: $base-line-height;
   color: $txt-primary;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
-h1 {
-  font-size: $font-size-h1;
-}
-
-h2 {
+.title {
   font-size: $font-size-h2;
-  font-weight: $light;
+  font-weight: $bold;
   color: $h2-color;
+  padding-bottom: 1rem;
+  text-align: center;
 }
 
 h3 {
   color: $h3-color;
-  font-size: $font-size-h4;
+  font-size: $font-size-h3;
   font-weight: $bold;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   line-height: $base-line-height;
+  text-align: center;
 }
 
 h4 {
   font-size: $font-size-h4;
+  font-weight: $normal;
+  text-align: center;
 }
 
 h5 {
@@ -73,4 +68,26 @@ h5 {
   color: $h5-color;
   text-transform: uppercase;
   font-weight: $semibold;
+  text-align: center;
+}
+
+.p-closer {
+  margin: 0;
+  padding: 0 0 10px;
+  text-align: center;
+}
+
+.invitation-wrapper {
+  text-align: center;
+}
+
+.invitation-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.event-details {
+  margin: 20px 0;
+  text-align: center;
 }
